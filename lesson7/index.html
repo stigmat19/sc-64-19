@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 10000px;
+        }
+
+
+        h1 ~ h3 {
+            color: red;
+        }
+
+        div a[href*="tut"] {
+            color: green;
+        }
+        p{
+            column-count: 2;
+        }
+        p:first-letter{
+            color: blueviolet;
+        }
+        p:first-line{
+            background-color: goldenrod;
+        }
+        p::selection{
+            color: aqua;
+            background-color: #ff61b9;
+        }
+        p:before{
+            content: "написать в начале";
+        }
+        p:after{
+            content: "написать в конце";
+        }
+        a:link{
+            color: greenyellow;
+            text-decoration: none;
+        }
+        a:visited{
+            color: aqua;
+        }
+        a:active{
+            font-size: 24px;
+        }
+        a:focus{
+            color: red;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        p:hover{
+            background-color: greenyellow;
+        }
+        li:first-child:hover{
+            background-color: cornflowerblue;
+        }
+        li:last-child{
+            background-color: hotpink;
+        }
+        li:nth-child(4):hover{
+            background-color: red;
+            /*height: 30px;*/
+            -moz-transform: scale(1.2) rotate(42deg) translate(-50px, -34px) skew(-44deg, -8deg);
+            -webkit-transform: scale(1.2) rotate(42deg) translate(-50px, -34px) skew(-44deg, -8deg);
+            -o-transform: scale(1.2) rotate(42deg) translate(-50px, -34px) skew(-44deg, -8deg);
+            -ms-transform: scale(1.2) rotate(42deg) translate(-50px, -34px) skew(-44deg, -8deg);
+            transform: scale(1.2) rotate(42deg) translate(-50px, -34px) skew(-44deg, -8deg);
+        }
+        li:nth-child(odd){
+            background-color: blueviolet;
+        }
+        li:nth-child(even){
+            background-color: brown;
+        }
+        li:nth-child(5n+3){
+            background-color: turquoise;
+        }
+        h3:first-of-type{
+            background-color: red;
+        }
+        h3:last-of-type{
+            background-color: blue;
+        }
+        h3:nth-of-type(3){
+            background-color: green;
+        }
+
+        /*position*/
+        .parent{
+            border: 3px solid blueviolet;
+            position: relative;
+        }
+        .parent div:first-child{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: relative;
+            right: -60px;
+            top: 0px;
+        }
+        .parent div:nth-child(2){
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            top: 0;
+
+        }
+        .parent div:last-child{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: fixed;
+            top: 43px;
+            right: 38px;
+            border-radius: 10px;
+            -webkit-box-shadow: 5px 8px 27px -5px rgba(0,0,0,0.75);
+            -moz-box-shadow: 5px 8px 27px -5px rgba(0,0,0,0.75);
+            box-shadow: 5px 8px 27px -5px rgba(0,0,0,0.75);
+        }
+        .parent div:hover{
+            z-index: 9;
+        }
+    </style>
+</head>
+<body>
+<!--special selectors-->
+<h1>hello</h1>
+<h3>world</h3>
+<h1>hello</h1>
+<h3>world</h3>
+<h1>hello</h1>
+<h3>world</h3>
+<h1>hello</h1>
+<h3>world</h3>
+<h1>hello</h1>
+<h3>world</h3>
+<h1>hello</h1>
+<h3>world</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias, amet aut
+    consequuntur cupiditate debitis dolore dolorem dolorum inventore, odio omnis
+    provident quod repellat reprehenderit saepe suscipit temporibus. Impedit,
+    porro? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam eos
+    illum minima numquam placeat ratione repudiandae ut. Alias consectetur,
+    debitis esse magni quas quia reprehenderit tenetur veniam. Cumque,
+    exercitationem, sit? Lorem ipsum dolor sit amet, consectetur adipisicing
+    elit. A debitis dignissimos dolorem exercitationem libero officiis quidem,
+    sequi voluptate. Aliquid autem distinctio labore laborum nam officia
+    quibusdam sed, tempore velit voluptatem.</p>
+
+<div>
+    <span>text</span>
+    <ul>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="http://vk.com">первая</a></li>
+        <li><a href="https://drive.google.com/drive/folders/0B7-pec-Rldg3R0x3VlRXZlhCSms?tid=0B7-pec-Rldg3Zjh5NjNEUDdzMVE">первая</a></li>
+        <li><a href="https://sites.google.com/site/feexpr/Downhome/Topic1/zadania-1/02-tablicy">первая</a></li>
+    </ul>
+</div>
+
+<p>Hello word</p>
+
+
+<!--position-->
+<div class="parent">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+
+</body>
+</html>
